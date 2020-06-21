@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+import "login_service.proto";
+
+service Test {
+    rpc getJwtToken (LogRequest) returns (LogResponse);
+    rpc checkJwtAuth (Message) returns (Message);
+}
+
+message Message {
+    string message = 1;
+}

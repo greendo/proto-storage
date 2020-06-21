@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service Login {
+    rpc Log (LogRequest) returns (LogResponse);
+}
+
+message LogRequest {
+    string name = 1;
+    string pass = 2;
+}
+
+message LogResponse {
+    string token = 1;
+}
